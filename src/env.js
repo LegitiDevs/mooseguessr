@@ -7,6 +7,7 @@ export const env = createEnv({
    * isn't built with invalid env vars.
    */
   server: {
+    DB_URL: z.string(),
     NODE_ENV: z.enum(["development", "test", "production"]),
   },
 
@@ -17,8 +18,9 @@ export const env = createEnv({
    */
   client: {
   },
-  
+
   runtimeEnv: {
+    DB_URL: process.env.DB_URL,
     NODE_ENV: process.env.NODE_ENV,
   },
 });
