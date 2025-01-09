@@ -10,7 +10,7 @@ export default async function GamePage() {
       <h1 className="text-10xl font-extrabold tracking-tight text-white sm:text-[4rem]">
         Guess the World
       </h1>
-      <Image src={world.url} width={600} height={600} alt="An image of a Minecraft world" />
+      <Image src={world?.url} width={600} height={600} alt="An image of a Minecraft world" />
       <Input placeholder="World Name" className="size-auto" />
       <SubmitButton world={JSON.parse(JSON.stringify(world))}></SubmitButton>
     </main>
