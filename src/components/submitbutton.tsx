@@ -5,6 +5,10 @@ interface SubmitButtonProps {
   world: object;
 }
 
-export default function SubmitButton({ world, }: SubmitButtonProps): JSX.Element {
-  return <Button>Submit</Button>;
+export default function SubmitButton({ world }: SubmitButtonProps): JSX.Element {
+  function handleClick() {
+    location.reload();
+  }
+
+  return <Button onClick={handleClick}>Submit</Button>;
 }
