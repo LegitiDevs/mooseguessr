@@ -1,7 +1,8 @@
 import { MongoClient } from "mongodb";
+import { env } from "../env.js"
 
 export default async function randomWorld() {
-  const client = new MongoClient(process.env.DB_URL);
+  const client = new MongoClient(env.DB_URL);
   await client.connect();
 
   const db = client.db("mooseguessr");

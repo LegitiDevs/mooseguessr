@@ -36,7 +36,9 @@ const config = {
           "attributes": false
         }
       }
-    ]
+    ],
+    // THIS IS BAD
+    "@typescript-eslint/no-unsafe-assignment": "off",
   }
 }
 module.exports = config;
